@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Activitat 7</title>
+</head>
+<body>
+    <script>
+
+var no1=prompt("Introdueix el no1");
+var no2=prompt("Introdueix el no2");
+var no3=prompt("Introdueix el no3");
+document.write("El màxim es: ");
+if(no1>no2 && no1>no3){
+    document.write(no1);
+}
+else{
+    if(no2>no1 && no2>no3){
+        document.write(no2);
+    }
+    else{
+        document.write(no3);
+    }
+}
+document.write("<br>");
+
+
+var num1=prompt("Introdueix el num1");
+var num2=prompt("Introdueix el num2");
+var num3=prompt("Introdueix el num3");
+document.write("El mínim es: ");
+if(num1<num2 && num1<num3){
+    document.write(num1);
+}
+else{
+    if(num2<num1 && num2<num3){
+        document.write(num2);
+    }
+    else{
+        document.write(num3);
+    }
+}
+document.write("<br>");
+
+var xifra=prompt("Introdueix un numero entre 0 i 999");
+var longitud=xifra.length;
+document.write("El numero te "+longitud+" xifres"+"<br>");
+
+var pos=prompt("Introdueix un nombre");
+if(pos==0){
+    document.write("El nombre es cero");
+}
+else{
+    if(pos>0){
+        document.write("El nombre es positiu");
+    }
+    else {
+        document.write("El nombre es negatiu");
+    }
+}
+
+    </script>
+</body>
+</html>

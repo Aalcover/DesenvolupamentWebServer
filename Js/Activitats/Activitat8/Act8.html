@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Activitat8</title>
+</head>
+<body>
+<script>
+
+var day=prompt("Introdueix el dia");
+var mes=prompt("Introdueix el mes");
+var any=prompt("Introdueix l'any");
+
+if(day==25 && mes==12){
+document.write("Es Nadal"+"<br");
+}
+
+var num1=prompt("Introdueix el num1");
+var num2=prompt("Introdueix el num2");
+var num3=prompt("Introdueix el num3");
+
+if(num1<10 && num2<10 && num3<10){
+document.write("els numeros son menors de 10"+"<br>")
+}
+
+var x=prompt("Intodueix la coordenada x");
+var y=prompt("Introdueix la coordenada y");
+
+if(x>0 && y>0){
+document.write("Primer quadrant");
+}
+
+else{
+if(x<0 && y>0){
+document.write("Segon quadrant");
+}
+else{
+if(x<0 && y<0){
+document.write("Tercer quadrant");
+}
+}
+else{
+document.write("Quart quadrant");
+}
+}
+document.write("<br>");
+
+var salari=prompt("Introdueix el salari");
+var antic=prompt("Introdueix l'antiguitat");
+antic=parseInt(antic);
+salari=parseInt(salari);
+
+if(salari<500 && antic>=10){
+document.write("el salari sera: "+(salari+salari*0.2));
+}
+else{
+if(salari<500 && antic<10){
+document.write("el salari sera: "+(salari+salari*0.05));
+}
+else{
+if(salari>=500){
+document.write("el salari sera: "+salari);
+}
+}
+}
+document.write("<br>");
+
+var no1=prompt("Introdueix el no1");
+var no2=prompt("Introdueix el no2");
+var no3=prompt("Introdueix el no3");
+if(no1<10 || no2<10 || no3<10){
+docment.write("Algun numero es menor de 10");
+}
+
+
+</script>
+
+</body>
+</html> 

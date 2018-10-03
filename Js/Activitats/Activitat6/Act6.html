@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Activitat 6</title>
+</head>
+
+<body>
+<script>
+var n1=prompt("Introdueix un numero");
+var n2=prompt("Introdueix un altre numero");
+var suma;
+var resta;
+if(n1>n2){
+suma=parseInt(n1)+parseInt(n2);
+document.write(suma);
+}
+else{
+resta=parseInt(n2)-parseInt(n1);
+document.write(resta);
+}
+document.write("<br>");
+
+var nota1=prompt("Introdueix la nota 1");
+var nota2=prompt("Introdueix la nota 2");
+var nota3=prompt("Introdueix la nota 3");
+nota1=parseInt(nota1);
+nota2=parseInt(nota2);
+nota3=parseInt(nota3);
+if((nota1+nota2+nota3)/3>=5){
+document.write("Has aprovat <br>");
+}
+else{
+document.write("Has suspes <br>");
+}
+
+var edat=prompt("Introdueix la teva edat");
+if(edat>=18 && edat<65){
+document.write("Estas en edat de treballar");
+}
+else{
+    document.write("No estas en edat de treballar");
+}
+
+</script>
+</body>
+
+</html> 

@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Activitat 5</title>
+</head>
+
+<body>
+<script>
+
+var nom=prompt("Introdueix el teu nom");
+var nota1=prompt("Introdueix la nota 1");
+var nota2=prompt("Introdueix la nota 2");
+var nota3=prompt("Introdueix la nota 3");
+var mitjana=(parseInt(nota1)+parseInt(nota2)+parseInt(nota3))/3;
+if(mitjana>=5) {
+document.write("Enhorabona has aprovat");
+}
+
+else {
+document.write("Has suspes")
+}
+document.write("<br>");
+
+var mail1=prompt("Introdueix l'e-mail");
+var mail2=prompt("Introdueix l'e-mail de nou");
+if(mail1!=mail2){
+document.write("Els e-mails no coincideixen");
+}
+document.write("<br>");
+
+var edat=prompt("Introdueix la teva edat");
+if(edat>=18 && edat<65){
+document.write("Estas en edat de treballar");
+}
+document.write("<br>");
+
+var numero=prompt("Introdueix un numero sencer");
+if(numero%2==0){
+document.write("El numero es parell");
+}
+</script>
+</body>
+
+</html> 
