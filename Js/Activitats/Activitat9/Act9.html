@@ -1,0 +1,119 @@
+ <!DOCTYPE html>
+<html>
+<title>HTML Tutorial</title>
+<body>
+
+<script>
+
+var trad=prompt("Introdueix una de les seguents paraules:house,table,dog,cat");
+
+switch (trad){
+
+case "house": document.write("casa");
+break;
+
+case "table": document.write("taula");
+break;
+
+case "dog": document.write("ca");
+break;
+
+case "cat": document.write("moix");
+break;
+
+default : document.write("No es una de les paraules");
+
+}
+
+document.write("<br>");
+
+var mes=prompt("Introdueix el numero de mes");
+
+switch (mes){
+
+case "1" : document.write("Gener");
+break;
+
+case "2": document.write("Febrer");
+break;
+
+case "3": document.write("Març");
+break;
+
+case "4": document.write("Abril");
+break;
+
+case "5": document.write("Maig");
+break;
+
+case "6": document.write("Juny");
+break;
+
+case "7": document.write("Juliol");
+break;
+
+case "8": document.write("Agost");
+break;
+
+case "9": document.write("Setembre");
+break;
+
+case "10": document.write("Octubre");
+break;
+
+case "11": document.write("Novembre");
+break;
+
+case "12": document.write("Decembre");
+break;
+
+default:document.write("No es un numero de mes");
+}
+
+document.write("<br>");
+
+var dies=prompt("Introdueix el numero de mes per saber els dies");
+
+switch(dies){
+case "1":
+case "3":
+case "5":
+case "7":
+case "8":
+case "10":
+case "12": document.write("El mes te 31 dies");
+break;
+
+case "2": document.write("El mes te 28 dies");
+break;
+
+case "4":
+case "6":
+case "9":
+case "11": document.write("El mes te 30 dies");
+break;
+
+default:document.write("No es un numero de mes");
+}
+
+document.write("<br>");
+
+var lletra=prompt("Introdueix una lletra");
+
+switch(lletra){
+
+case "a":
+case "e":
+case "i":
+case "o":
+case "u": document.write("Es una vocal");
+break;
+
+default: document.write("Es una consonant");
+
+}
+
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,159 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Activitat 12</title>
+</head>
+<body>
+<script>
+
+//Part a
+
+var cont=0;
+for(var i=0;i<3;i++){
+var B=prompt("Introdueix la base del triangle");
+var H=prompt("Introdueix l'altura del triangle");
+
+var area=(B*H)/2;
+document.write("L'area es "+area+" <br>");
+if (area>12){
+cont++;
+}
+}
+document.write("Hi ha "+cont+" triangles amb area major de 12"+"<br>");
+
+//Part b
+
+var suma=0;
+suma=parseInt(suma);
+
+for(var j=0;j<10;j++){
+    var numero=prompt("Introdueix un numero");
+    if(j>=5){
+        suma=suma+parseInt(numero);
+    }
+}
+document.write("La suma es "+suma+"<br>");
+
+//Part c
+
+for(var k=1;k<=10;k++){
+    document.write(5*k+" ");
+}
+document.write("<br>");
+
+//Part d
+
+var N=prompt("Introdueix un numero");
+
+for(var l=1;l<=10;l++){
+    document.write(N*l+" ");
+}
+document.write("<br>");
+
+//Part e
+
+var equi=0;
+var iso=0;
+var esca=0;
+
+
+for(var n=1;n<5;n++){
+    var c1=prompt("Introdueix el costat 1 del triangle");
+    var c2=prompt("Introdueix el costat 2");
+    var c3=prompt("Introdueix el costat 3");
+
+    if(c1==c2 && c1==c3){
+        document.write("El triangle "+n+" es equilater"+"<br>");
+        equi++;
+    }
+
+    if(c1==c2 && c1!=c3 || c2==c3 && c2!=c1 || c1==c3 && c1!=c2){
+        document.write("El triangle "+n+" es isoscels"+"<br>");
+        iso++;
+            
+    }        
+    if(c1!=c2 && c1!=c3 && c2!=c3){
+        document.write("El triangle "+n+" es escale"+"<br>");
+        esca++;
+    }
+       
+        
+}
+document.write("<br>");
+
+if(equi>iso && equi>esca){
+    document.write("Hi ha mes equilaters");
+}
+else{
+    if(iso>equi && iso>esca){
+        document.write("Hi ha mes isoscels");
+    }
+    else{
+        if(esca>equi && esca>iso){
+            document.write("Hi ha mes escalens");
+        }
+    }
+}
+document.write("<br>");
+
+
+//Part f
+
+var pos=0;
+var neg=0;
+var odd=0;
+var suma=0;
+suma=parseInt(suma);
+
+for(var p=0;p<10;p++){
+    var num=prompt("Introdueix un numero");
+    if(num>0){
+        pos++;
+    }
+    else{
+        neg++;
+    }
+
+    if(num%2!=0){
+        odd++;
+    }
+    else{
+        suma=suma+parseInt(num);
+    }
+}
+document.write("Hi ha "+pos+" positius"+"<br>");
+document.write("Hi ha "+neg+" negatius"+"<br>");
+document.write("Hi ha "+odd+" senars"+"<br>");
+document.write("La suma dels parells es "+suma+"<br>");
+
+//Part e
+
+var sumatori=0;
+sumatori=parseInt(sumatori);
+var avgmax=0;
+var avg=0;
+var millor;
+document.write("Clase A:5 alumnes, clase B:6 alumnes i clase C:11alumnes"+"<br>")
+
+for(var x=1;x<=3;x++){
+    var z=prompt("Introdueix el numero d'alumnes");
+    
+    for(v=0;v<z;v++){
+        var mark=prompt("Introdueix la calificació");
+        sumatori=sumatori+parseInt(mark);
+    }
+    avg=sumatori/z;
+    document.write(avg+"<br>");
+    if(avg>avgmax){
+        avgmax=avg;
+        millor=x;
+    }
+    sumatori=0;
+}
+document.write("La millor clase es "+millor)
+
+
+</script>
+
+</body>
+</html> 

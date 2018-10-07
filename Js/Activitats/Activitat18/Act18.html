@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Activitat 18</title>
+</head>
+<body>
+    <script>
+   
+    //Part a
+
+    cont=0;
+    var nom;
+    do{
+        nom=prompt("Introdueix un nom, <end> per acabar");
+        cont++;
+    }
+    while(nom!="end")
+    document.write(parseInt(cont)-1+"<br>");
+
+    //Part b
+
+    var text=prompt("Introdueix un text");
+    var paraula=prompt("Introdueix la paraula per cercar");
+    var ind=text.indexOf(paraula);
+    if(ind!=-1){
+        document.write(ind+"<br>");
+    }
+    else {
+        document.write("La paraula no hi es"+"<br>");
+    }
+
+    //Part c
+    
+    var word=prompt("Introdueix una paraula");
+    var cont=0;
+    for(var i=0;i<word.length;i++){
+        if(word.charAt(i)!=word.charAt(word.length-1-parseInt(i))){
+            document.write("No es palindrom"+"<br>");
+            cont++;
+            break;
+        }
+    }
+    if(cont==0){
+    document.write("Es un palindrom"+"<br>");
+    }
+
+    //Part d
+
+    var mail=prompt("Introdueix el correu electronic");
+    if(mail.indexOf("@")!=-1){
+        document.write("Hi ha una @"+"<br>");
+    }
+    else {
+        document.write("No hi ha @"+"<br>");
+    }
+    
+    //Part e
+
+    var mot=prompt("Introdueix una paraula");
+    document.write(mot.substring(0,(mot.length/2))+"<br>");
+    document.write(mot.charAt(mot.length-1)+"<br>");
+    var reve="";
+    var vocals=0;
+    for(var k=mot.length-1;k>=0;k--){
+        document.write(mot.charAt(k));
+    }
+    document.write("<br>");
+    var separat="";
+    for(var l=0;l<mot.length;l++){
+        separat=separat+" "+mot.charAt(l);
+        if(mot.charAt(l)=="a" || mot.charAt(l)=="e" || mot.charAt(l)=="i" ||mot.charAt(l)=="o" ||mot.charAt(l)=="u"){
+            vocals++;
+        }
+    }
+    document.write(separat+"<br>");
+    document.write("Hi ha vocals: "+vocals);
+
+    //Part d
+
+    var frase=prompt("Introdueix una frase");
+    var espai=frase.indexOf(" ");  
+           
+    document.write(frase.substring(0,frase.indexOf(" "))+"<br>");
+do{    
+    document.write(frase.substring(espai,frase.indexOf(" ",parseInt(espai)+1))+"<br>");
+    espai=frase.indexOf(" ",parseInt(espai)+1);
+}  
+ while(espai<parseInt(frase.lastIndexOf(" ")));
+    
+    document.write(frase.substring(frase.lastIndexOf(" "),frase.length));
+    
+
+    </script>
+</body>
+</html>

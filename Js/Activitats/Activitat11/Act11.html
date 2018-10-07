@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Activitat 11</title>
+</head>
+<body>
+<script>
+
+//Part a
+
+var suma=0;
+suma=parseInt(suma);
+do{
+
+var numero=prompt("Introdueix numeros positius o negatius");
+numero=parseInt(numero);
+
+suma=suma+numero;
+}
+while(numero!=9999);
+
+if(suma<0){
+document.write("Negatiu"+"<br>");
+}
+
+else{
+if(suma==0){
+document.write("Zero"+"<br>");
+}
+else{
+document.write("Positiu"+"<br>");
+}
+}
+
+//Part b
+
+var total=0;
+var homes=0;
+var dones=0;
+var currants=0;
+var idvella;
+var idjove;
+var edatmax=0;
+var edatmin=1500;
+
+do{
+var id=prompt("Introdueix la Id");
+var edat=prompt("Introdueix l'edat");
+var sexe=prompt("Introdueix el sexe: M o F");
+
+
+total++;
+if(edat>edatmax && sexe=="F"){
+edatmax=edat;
+idvella=id;
+
+}
+
+if(edat<edatmin && sexe=="M"){
+edatmin=edat;
+idjove=id;
+
+}
+
+if(sexe=="M"){
+homes++;
+}
+
+if(sexe=="F"){
+dones++;
+}
+if(sexe=="M" && edat>=18 && edat<=65){
+currants++;
+}
+
+}
+while(id!=0);
+document.write("Total "+total+"<br>");
+document.write("Homes "+homes+"<br>");
+document.write("Dones "+dones+"<br>");
+document.write("Currants "+currants+"<br>");
+document.write("Dona major "+idvella+"<br>");
+document.write("Home menor "+idjove+"<br>");
+
+
+
+</script>
+
+
+</body>
+</html> 

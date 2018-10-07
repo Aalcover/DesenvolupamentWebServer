@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       
+       function term(){
+
+           var d=new Date();
+           switch(d.getMonth()){
+               case 0:
+               case 1:
+               case 2:document.write("Primer trimestre");
+               break;
+
+               case 3:
+               case 4:
+               case 5:document.write("Segon trimestre");
+               break;
+
+               case 6:
+               case 7:
+               case 8:document.write("Tercer trimestre");
+               break;
+
+               case 9:
+               case 10:
+               case 11:document.write("Quart trimestre");
+               break;
+           }
+       }
+       term();
+
+
+   </script> 
+</body>
+</html>

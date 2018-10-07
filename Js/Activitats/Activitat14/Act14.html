@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    //Part a
+
+    function Additions(){
+        this.value1;
+        this.value2;
+        this.loadvalue1=loadvalue1;
+        this.loadvalue2=loadvalue2;
+        this.result=result;
+    }
+
+    function loadvalue1(){
+        this.value1=prompt("Introdueix el primer valor");
+    }
+    function loadvalue2(){
+        this.value2=prompt("Introdueix el segon valor");
+    }
+    function result(){
+        var suma=parseInt(this.value1)+parseInt(this.value2);
+        document.write(suma+"<br>");
+    }
+    var ad1=new Additions;
+    ad1.loadvalue1();
+    ad1.loadvalue2();
+    ad1.result();
+
+
+    //Part b
+
+    function Persona(name,age){
+        this.name=name;
+        this.age=age;
+
+    }
+
+    function Companyia(name){
+        this.name=name;
+        this.treballadors=treballadors;
+    }
+    function treballadors(p1){
+        var edat=false;
+        if(p1.age>=18 && p1.age<65){
+            edat=true;
+        }
+        return edat;
+    }
+
+    var c1=new Companyia("Sastres S.A");
+    var per1=new Persona("Joana",15);
+    var per2=new Persona("Pau",15);
+    var cont=0;
+    if(c1.treballadors(per1)){       
+        cont++;
+    }
+    if(c1.treballadors(per2)){       
+        cont++;
+    }
+    document.write("Hi ha "+cont+" posibles treballadors"+"<br>");
+
+    
+    </script>
+</body>
+</html>

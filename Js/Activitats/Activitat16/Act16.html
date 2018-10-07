@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    //Part a
+    function matrix(){
+    var matriu=new Array;
+    var suma=0;
+    suma=parseInt(suma);
+    var majors=0;
+    majors=parseInt(majors);
+    var cont=0;
+    for(var i=0;i<8;i++){
+
+        matriu[i]=prompt("Introdueix un valor");
+    }
+
+    for(var j=0;j<8;j++){
+        suma=suma+parseInt(matriu[j]);
+    }
+    document.write(suma+"<br>");
+    document.write(suma/8+"<br>");
+
+    for(var k=0;k<8;k++){
+        if(matriu[k]>5){
+            majors=majors+parseInt(matriu[k]);
+            cont++;
+        }
+    }
+    document.write(majors+"<br>");
+    document.write(cont+"<br>");
+    }
+    matrix();
+    //Part b
+
+    function matriu(){
+    var n=prompt("Introdueix la longitud del vector");
+    var vector=new Array(n);
+    var v1=prompt("Introdueix un valor");
+    var v2=prompt("Introdueix un valor");
+    var suma=0;
+    suma=parseInt(suma);
+
+    for(var i=0;i<n;i++){
+        if(i%2==0){
+            vector[i]=v1;
+        }
+        else {
+            vector[i]=v2;
+        }
+    }
+    document.write(vector+"<br>");
+    for(var k=0;k<n;k++){
+        suma=suma+parseInt(vector[k]);
+    }
+    document.write(suma);
+    }
+    matriu();
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    //Part a
+        function minim(x1,x2,x3){
+            var matriu=[x1,x2,x3]
+            var mini=matriu[0];
+            for(var i=0;i<3;i++){
+            
+             if(matriu[i]<mini){
+                 mini=matriu[i];
+             }
+            }
+            document.write(mini+"<br>");
+        }
+        var v1,v2,v3;
+        v1=prompt("Introdueix el numero 1");
+        v2=prompt("Introdueix el numero 2");
+        v3=prompt("Introdueix el numero 3");
+        minim(v1,v2,v3);
+
+    //Part b
+
+        function ascend(x1,x2,x3){
+            var mat=new Array;
+            for(var j=0;j<3;j++){
+            if(x1<x2 && x1<x3){
+                mat[j]=x1;
+                x1=parseInt(x1+x2+x3);
+            }
+            else if(x2<x1 && x2<x3){
+                mat[j]=x2;
+                x2=parseInt(x1+x2+x3);
+            }
+            else if(x3<x1 && x3<x2){
+                mat[j]=x3;
+                x3=parseInt(x1+x2+x3);
+            }
+           
+        }
+        document.write(mat+"<br>");
+        }
+        var va1,va2,va3;
+        va1=prompt("Introdueix el numero 1");
+        va2=prompt("Introdueix el numero 2");
+        va3=prompt("Introdueix el numero 3");
+        ascend(va1,va2,va3);
+
+    //Part c
+
+        function perimetre(c1){
+            document.write(c1*4+"<br>");
+        }
+        var cat=prompt("Introdueix la mida del costat");
+        perimetre(cat);
+
+    //Part d
+
+        function longitud(n1){
+            document.write(n1.length+"<br>");
+
+        }
+
+        var nume=prompt("Introdueix una xifra");
+        longitud(nume);
+
+    //Part e
+
+        function mitjana(p1,p2,p3){
+            var mit=(parseInt(p1)+parseInt(p2)+parseInt(p3))/3;
+            document.write(mit+"<br>");
+        }
+        var val1,val2,val3;
+        val1=prompt("Introdueix el numero 1");
+        val2=prompt("Introdueix el numero 2");
+        val3=prompt("Introdueix el numero 3");
+        mitjana(val1,val2,val3);
+
+    //Part f
+
+        function suma(a1,a2,a3,a4,a5){
+            var su=parseInt(a1)+parseInt(a2)+parseInt(a3)+parseInt(a4)+parseInt(a5);
+            document.write(su+"<br>");
+        }
+        var t1,t2,t3,t4,t5;
+        t1=prompt("Introdueix el numero 1");
+        t2=prompt("Introdueix el numero 2");
+        t3=prompt("Introdueix el numero 3");
+        t4=prompt("Introdueix el numero 4");
+        t5=prompt("Introdueix el numero 5");
+        suma(t1,t2,t3,t4,t5);
+
+    </script>
+</body>
+</html>

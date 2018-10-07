@@ -1,0 +1,151 @@
+ <!DOCTYPE html>
+<html>
+<title>Activitat 10</title>
+<body>
+
+<script>
+
+var x=1;
+
+while(x<=50){
+document.write(x+" ");
+x++;
+}
+document.write("<br>");
+
+var y=50;
+
+while(y>=1){
+document.write(y+" ");
+y--;
+}
+document.write("<br>");
+
+var z=-50;
+
+while(z<=0){
+document.write(z+" ");
+z++;
+}
+document.write("<br>");
+
+var q=2;
+
+while(q<=100){
+document.write(q+" ");
+q=q+2;
+}
+document.write("<br>");
+
+var w=11;
+var r=1;
+
+while(r<=25){
+document.write(w+11+" ");
+r++;
+w=w+11;
+}
+document.write("<br>");
+
+var mult=7;
+var inc=1;
+
+while(inc<=10){
+document.write(mult*inc+" ");
+inc++;
+
+}
+document.write("<br>");
+
+var p=1;
+var contador=0;
+while(p<=10){
+nota=prompt("Introdueix la nota");
+if(nota>=5){
+contador++;
+}
+p++;
+}
+document.write("Han aprovat "+contador+ " alumnes");
+document.write("<br>");
+
+var suma=0;
+suma=parseInt(suma);
+var h=1;
+
+while(h<=5){
+suma=suma+parseInt(prompt("Introdueix l'alçada"));
+h++;
+}
+document.write(suma);
+document.write("<br>");
+
+var totalSalaris=0;
+totalSalaris=parseInt(totalSalaris);
+var b=1;
+var c1=0;
+var c2=0;
+
+while(b<=5){
+var salari=prompt("Introdueix el teu salari");
+salari=parseInt(salari);
+totalSalaris=totalSalaris+salari;
+if (salari>500 && salari <1000){
+c1++
+}
+if (salari>1000){
+c2++;
+}
+b++;
+}
+document.write("El total de salaris es "+totalSalaris+"<br>");
+document.write("Hi ha "+c1+" salaris entre 500 i 1000"+"<br>");
+document.write("Hi ha "+c2+" salaris majors de 1000"+"<br>");
+
+//Part h
+
+var l=1;
+var tot1=0;
+tot1=parseInt(tot1);
+var j=1;
+var tot2=0;
+tot2=parseInt(tot2);
+while(l<=3){
+    var numero=parseInt(prompt("Introdueix una serie de tres numeros,numero "+l));
+tot1=tot1+numero;
+l++;
+}
+while(j<=3){
+    var numero2=parseInt(prompt("Introdueix un altre serie, numero "+j));
+    tot2=tot2+numero2;
+    j++;
+}
+if(tot1>tot2){
+    document.write("La serie major es la primera, amb un total de "+tot1+"<br>");
+}
+else{
+    document.write("La serie major es la segona, amb un total de "+tot2+"<br>");
+}
+
+//Part i
+
+var k=1;
+var parells=0;
+var senars=0;
+
+while(k<=5){
+    var valor=prompt("Introdueix un numero");
+    if(valor%2==0){
+        parells++;
+    }
+    else{
+        senars++;
+    }
+    k++;
+}
+document.write("El numero de parells es "+parells+" i el numero de senars es "+senars);
+
+</script>
+
+</body>
+</html> 
