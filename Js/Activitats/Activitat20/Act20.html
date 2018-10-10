@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--Part a -->
+    <script>
+    function arrel(nume){
+        
+        return (Math.pow(nume,2));
+
+    }
+    </script>
+
+
+    <input type="text" name="fname" id="num"><br>
+    <button onclick="alert(arrel(num.value))">Arrel</button><br>
+   <!--Part b-->
+
+    <script>
+    function major(){
+        var nume1=document.getElementById("num1").value;
+        var nume2=document.getElementById("num2").value;
+        var majo;
+        if(num1>num2){
+            majo=num1;
+        }
+        else{
+            majo=num2;
+        }
+        return majo;
+    }
+    </script>
+
+   <input type="text" name="fname" id="num1"><br>
+   <input type="text" name="fname" id="num2"><br>
+   <button onclick="alert(major)">Major</button><br>
+   <!--Part c-->
+
+
+   <script>
+   function ident(){
+       var n=document.getElementById("num3").value;
+       var n2=document.getElementById("num4").value;
+       alert(n+" "+n2);
+   }
+   </script>
+   <input type="text" name="nom" id="num3"><br>
+   <input type="text" name="2nom" id="num4"><br>
+   <button onclick=ident()>Noms</button>
+   
+</body>
+</html>

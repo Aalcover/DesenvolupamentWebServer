@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function claus(){
+        var passw1=document.getElementById("pass").value;
+        var passw2=document.getElementById("pass2").value;
+        if(passw1==passw2){
+            alert("El password es correcte");
+        }
+        else {
+            alert("El password no es igual");
+        }
+    }
+    </script>
+
+<input type="password" id="pass"><br/>
+<input type="password" id="pass2"><br/>
+<button type="button"  onClick="claus()">Comprovar</button>
+
+</body>
+</html>

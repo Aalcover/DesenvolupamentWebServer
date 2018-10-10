@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--Part a-->
+    <script>
+    function preu(){
+        var sel=document.getElementById("select1");
+        document.getElementById('pass').value=sel.options[sel.selectedIndex].value;
+    }
+    </script>
+
+    <select id="select1" onChange="preu()">
+        <option value="6">Pepperoni</option>
+        <option value="5">4Formagi</option>
+        <option value="4">Prosciuto</option>
+    </select>
+    <br>
+    <input type="text" id="pass"><br/> 
+
+    <!--Part b-->
+
+    <script>
+    function total(){
+        var sel2=document.getElementById("select2").value;
+        var sel3=document.getElementById("select3").value;
+        var sel4=document.getElementById("select4").value;
+        var suma=parseInt(sel2)+parseInt(sel3)+parseInt(sel4);
+        document.getElementById('t2').value=suma;
+    }
+    </script>
+
+    <select id="select2" onChange="preu()">
+            <option value="400">I3</option>
+            <option value="600">I5</option>
+            <option value="800">I7</option>
+    </select>
+    <br>
+    <select id="select3" onChange="preu()">
+            <option value="250">20</option>
+            <option value="350">22</option>
+            <option value="550">26</option>
+    </select>
+    <br>
+    <select id="select4" onChange="preu()">
+            <option value="300">500gb</option>
+            <option value="440">1tb</option>
+            <option value="500">3tb</option>
+    </select>
+    <br>
+    <input type="text" id="t2"><br/>
+    <button type="button" onclick="total()">Total</button><br>
+
+    <!--Part c-->
+
+    <script>
+    function pizzes(){
+        var sel5=document.getElementById("select5").value;
+        var tot=sel5*(document.getElementById("t3").value);
+        document.getElementById("t4").value=tot;
+    }
+    </script>
+
+    <select id="select5" onChange="preu()">
+            <option value="6">Pepperoni</option>
+            <option value="5">4Formagi</option>
+            <option value="4">Prosciuto</option>
+    </select>
+        <br>
+        <input type="text" id="t3"><br/> 
+        <button type="button" onclick="pizzes()">Preu</button><br>
+        <input type="text" id="t4"><br/>
+    
+    <!--Part d-->
+
+    <script>
+    function evalua(){
+        var sel6=document.getElementById("select6").value;
+        var sel7=document.getElementById("select7").value;
+        var sel8=document.getElementById("select8").value;
+        var sel9=document.getElementById("select9").value;
+        var nota=parseFloat(sel6)+parseFloat(sel7)+parseFloat(sel8)+parseFloat(sel9);
+        alert("La teva nota es "+nota);
+    }
+    </script>
+
+    <p>Quin es el color del cel?</p>
+    <select id="select6" onChange="preu()">
+        <option value="2.5">Blau</option>
+        <option value="0">Vermell</option>
+        <option value="0">Groc</option>
+        <option value="0">Negre</option>
+    </select>
+    <br>
+    <p>Quin es el color del mar?</p>
+    <select id="select7" onChange="preu()">
+        <option value="2.5">Blau</option>
+        <option value="0">Vermell</option>
+        <option value="0">Groc</option>
+        <option value="0">Negre</option>
+    </select>
+    <br>
+    <p>Quin es el color del sol?</p>
+    <select id="select8" onChange="preu()">
+        <option value="0">Blau</option>
+        <option value="0">Vermell</option>
+        <option value="2.5">Groc</option>
+        <option value="0">Negre</option>
+    </select>
+    <br>
+    <p>Quin es el color de l'or?</p>
+    <select id="select9" onChange="preu()">
+        <option value="0">Blau</option>
+        <option value="0">Vermell</option>
+        <option value="2.5">Groc</option>
+        <option value="0">Negre</option>
+    </select>
+    <br>
+    <button type="button" onclick="evalua()">Nota</button><br>
+    
+    
+</body>
+</html>

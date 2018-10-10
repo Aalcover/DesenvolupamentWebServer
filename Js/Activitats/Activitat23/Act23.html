@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function seleccionats(){
+        var selec=new Array;
+        if(document.getElementById('checkbox1').checked){
+            selec.push("Karate");
+        }
+        if(document.getElementById('checkbox2').checked){
+            selec.push("Tennis");
+        }
+        if(document.getElementById('checkbox3').checked){
+            selec.push("Futbol");
+        }
+        alert("Has triat "+selec);
+    }
+    </script>
+
+    <form>
+        <input type="checkbox" id="checkbox1">Karate
+        <br>
+        <input type="checkbox" id="checkbox2">Tennis
+        <br>
+        <input type="checkbox" id="checkbox3">Futbol
+        <br>
+        
+        <input type="button" value="Seleccio" onClick="seleccionats()">;
+        </form>
+
+</body>
+</html>
