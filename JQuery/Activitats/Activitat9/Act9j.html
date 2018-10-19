@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/aleix/Documents/DAW2/Client/Practica/DesenvolupamentWebServer/JQuery/Activitats/jquery.js"></script>
+</head>
+<body>
+    <script>
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            alert($("head").html());
+          
+        });
+    });
+    $(document).ready(function(){
+        $("#b2").click(function(){
+            alert($("body").html());
+          
+        });
+    });
+    </script>
+
+    <button id="b1">Head</button>
+    <button id="b2">Body</button>
+</body>
+</html>

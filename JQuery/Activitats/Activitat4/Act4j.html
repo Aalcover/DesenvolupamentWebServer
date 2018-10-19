@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/aleix/Documents/DAW2/Client/Practica/DesenvolupamentWebServer/JQuery/Activitats/jquery.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            
+        }
+        </style>
+</head>
+<body>
+    <table id="t1">
+        <tr id="fila1">
+            <td>Hola</td>
+            <td>Adeu</td>
+        </tr>
+        <tr id="fila2">
+            <td>Dia</td>
+            <td>Nit</td>
+
+        </tr>
+        <tr id="fila3">
+            <td>Diari</td>
+            <td>Nocturn</td>
+
+        </tr>
+
+    </table>
+    <table id="t2">
+        <tr id="fila21">
+            <td>Hola</td>
+            <td>Adeu</td>
+        </tr>
+        <tr id="fila22">
+            <td>Dia</td>
+            <td>Nit</td>
+
+        </tr>
+        <tr id="fila23">
+            <td>Diari</td>
+            <td>Nocturn</td>
+
+        </tr>
+
+    </table>
+    <script>
+     $(document).ready(function(){
+        $("#fila1").click(function(){
+            var x=$("#fila1");
+            x.css("background-color","red");
+        });
+    });
+    $(document).ready(function(){
+        $("#fila2").click(function(){
+            var x=$("#fila2");
+            x.css("background-color","red");
+        });
+    });
+    $(document).ready(function(){
+        $("#fila3").click(function(){
+            var x=$("#fila3");
+            x.css("background-color","red");
+        });
+    });
+    $(document).ready(function(){
+        $("#fila21").click(function(){
+            var x=$("#fila21");
+            x.css("font-size","200%");
+        });
+    });
+    $(document).ready(function(){
+        $("#fila22").click(function(){
+            var x=$("#fila22");
+            x.css("font-size","200%");
+        });
+    });
+    $(document).ready(function(){
+        $("#fila23").click(function(){
+            var x=$("#fila23");
+            x.css("font-size","200%");
+        });
+    });
+    </script>
+</body>
+</html>

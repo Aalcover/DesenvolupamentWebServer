@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/aleix/Documents/DAW2/Client/Practica/DesenvolupamentWebServer/JQuery/Activitats/jquery.js"></script>
+    <style>
+    table, th, td {
+   border: 1px solid black;
+}
+    .vermell {
+        background-color: blueviolet;
+    }
+    .groc {
+        background-color: chartreuse;
+    }
+    </style>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+        $("#b1").click(function(){
+            var x=$("th");
+            x.addClass("vermell");
+        });
+    });
+    $(document).ready(function(){
+        $("#b2").click(function(){
+            var x=$("td");
+            x.addClass("groc");
+        });
+    });
+    $(document).ready(function(){
+        $("#b3").click(function(){
+            var x=$("th");
+            x.removeClass("vermell");
+        });
+    });
+    $(document).ready(function(){
+        $("#b4").click(function(){
+            var x=$("td");
+            x.removeClass("groc");
+        });
+    });
+     
+    </script>
+    <table>
+        <tr>
+            <th>Col1</th>
+            <th>Col2</th>
+            <th>Col3</th>
+        </tr>
+        <tr>
+            <td>Ca</td>
+            <td>Moix</td>
+            <td>Peix</td>
+
+        </tr>
+        <tr>
+            <td>Ca</td>
+            <td>Moix</td>
+            <td>Peix</td>
+    
+        </tr>
+
+    </table>
+    <button id="b1">LinkHead</button>
+    <button id="b2">LinkBody</button>
+    <button id="b3">RemoveHead</button>
+    <button id="b4">RemoveBody</button>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/aleix/Documents/DAW2/Client/Practica/DesenvolupamentWebServer/JQuery/Activitats/jquery.js"></script>
+</head>
+<body>
+    <script>
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            $("a").attr("href","http://www.google.com");
+        });
+    });
+    $(document).ready(function(){
+        $("#b2").click(function(){
+            $("a").attr("href","http://www.bing.com");
+        });
+    });
+    $(document).ready(function(){
+        $("#b3").click(function(){
+            $("a").attr("href","http://www.yahoo.com");
+        });
+    });
+    </script>
+    <a href="">Link</a>
+    <button id="b1">Google</button>
+    <button id="b2">Bing</button>
+    <button id="b3">Yahoo</button>
+</body>
+</html>
