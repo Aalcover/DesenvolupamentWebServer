@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/aleix/Documents/DAW2/Client/Practica/DesenvolupamentWebServer/JQuery/Activitats/jquery.js"></script>
+    <style>
+            table, th, td {
+           border: 1px solid black;
+        }
+            </style>
+</head>
+<body>
+    <script>
+    $(document).ready(iEvents);
+    function iEvents(){
+        $("td").hover(entraRata,surtRata);
+    }
+    function entraRata(){
+        $(this).css("background-color","red");
+    }
+    function surtRata(){
+        $(this).css("background-color","white");
+    }
+    
+    </script>
+    <table>
+        <tr>
+            <td>Moix</td>
+            <td>Cat</td>
+        </tr>
+        <tr>
+            <td>Gato</td>
+            <td>Neko</td>
+        </tr>
+    </table>
+</body>
+</html>

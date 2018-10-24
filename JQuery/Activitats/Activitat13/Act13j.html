@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/aleix/Documents/DAW2/Client/Practica/DesenvolupamentWebServer/JQuery/Activitats/jquery.js"></script>
+    <style>
+    div {
+        height: 200px;
+        width: 200px;
+        background-color: rgb(25, 73, 80);
+    }
+</style>
+</head>
+<body>
+    <script>
+    $(document).ready(function(){
+        $("div").mousemove(function(event){
+            $("#corx").text("Coordenada x= "+event.clientX);
+            $("#cory").text("Coordenada y= "+event.clientY);
+        });
+    });
+    $(document).ready(function(){
+        $("div").mouseout(function(){
+            $("p").css("visibility","hidden");
+            alert("Mouse out of the div");
+          
+        });
+    });
+    $(document).ready(function(){
+        $("div").mouseover(function(){
+            
+            $("p").css("visibility", "visible");
+        });
+    });
+    </script>
+    <div>
+            <p id="corx"></p>
+            <p id="cory"></p>
+    </div>
+</body>
+</html>
