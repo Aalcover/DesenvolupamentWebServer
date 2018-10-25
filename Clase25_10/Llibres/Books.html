@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/home/aleix/Documents/DAW2/Client/Practica/DesenvolupamentWebServer/JQuery/Activitats/jquery.js"></script>
+    <script>
+    function book(title,pages,category,col,row){
+        this.title=title;
+        this.pages=pages;
+        this.category=category;
+        this.col=col;
+        this.row=row;
+    }
+    var cont=0;
+    var llibres=new Array;
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            
+           var tit= $("#title").val();
+           var pag= $("#pages").val();
+           var cat= $("#cats").val();
+           var columna= $("#col").val();
+           var fila=  $("#row").val();
+        llibres[cont]=new book(tit,pag,cat,columna,fila);
+        
+        cont++;
+        
+        });
+    });
+    $(document).ready(function(){
+        $("#b3").click(function(){
+    for(var i=0;i<llibres.length;i++){
+        document.write(llibres[i].title);
+    }
+});
+    });
+    
+    </script>
+</head>
+<body>
+        TITLE: <input type="text" id="title" /><br/>
+		NUM.PAGES: <input type="text" id="pages" /><br/>
+		CATEGORY:
+		<select id="cats">
+			<option value="CLASSIC">CLASSIC</option>
+			<option value="SCIENCE">SCIENCE</option>
+			<option value="SPORTS">SPORTS</option>
+			<option value="COMEDY">COMEDY</option>
+		</select> <br/>
+		POSITION (COL / ROW):
+		<select id="col">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select> /
+		<select id="row">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select> <br/>
+		<button id="b1">ADD BOOK</button> 
+		<button id="b2">REMOVE BOOK</button> 
+		<button id="b3">PRINT ALL BOOKS</button>
+		<button id="b4">PRINT LIBRARY</button>
+		<button id="b5">NUM BOOKS</button>
+		<hr/>
+<div id="printer"></div>
+</body>
+</html>
