@@ -6,7 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="/home/aleix/Documents/DAW2/Client/Practica/DesenvolupamentWebServer/JQuery/Activitats/jquery.js"></script>
+    <style>
+    table, th, td {
+   border: 1px solid black;
+}
+    </style>
     <script>
+        function getBook(col, row){
+			for(var i=0; i<llibres.length; i++){
+				var l = llibres[i];
+				if(l.col==col && l.row==row){
+					return l;
+				}
+			}
+			return null;
+		}
+        function taula(){
+        var txt="<table>";
+            txt+="<tr><th>#</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>";
+            for(var r=0; r<4; r++){
+				txt+="<tr><td><b>"+r+"</b></td>";
+                    for(var c=0; c<4; c++){
+                        l = getBook(c, r);
+					if(l!=null){
+						info ="<img src='"+l.category+".png' width='50px' /><br/>";
+						info += "<b>"+l.title+"</b><br/>"+l.category;
+						info +="<br/>"+l.pages+" pag.";
+						txt +="<td>"+info+"</td>";
+					}
+					else {
+						txt+="<td><img src='empty.png' width='50px' /></td>";
+					}
+                    } 
+                    txt+="</tr>";          
+            }
+            txt += "</table>";
+            return txt;
+    }
     function book(title,pages,category,col,row){
         this.title=title;
         this.pages=pages;
@@ -32,10 +68,39 @@
     });
     $(document).ready(function(){
         $("#b3").click(function(){
+            $("#printer").empty();
+            var txt="";
     for(var i=0;i<llibres.length;i++){
-        document.write(llibres[i].title);
+        l=llibres[i];
+        txt+=l.title + ", "+ l.pages+", "+l.category+ ", "+ l.col+", "+l.row+"<br>"
+        
     }
+    $("#printer").html(txt);
 });
+    });
+    $(document).ready(function(){
+        $("#b2").click(function(){
+            var index;
+            for(var i=0;i<llibres.length;i++){
+                
+              if(  llibres[i].title==$("#title").val()){
+                  index=i;
+              }
+            }
+            llibres.splice(index,1);
+        });
+    });
+    $(document).ready(function(){
+        $("#b5").click(function(){
+            $("#printer").append("<p/>El numero de llibres es "+llibres.length);
+        });
+    });
+    $(document).ready(function(){
+        $("#b4").click(function(){
+            $("#printer").empty();
+            $("#printer").html(taula);
+            
+        });
     });
     
     </script>
@@ -45,10 +110,10 @@
 		NUM.PAGES: <input type="text" id="pages" /><br/>
 		CATEGORY:
 		<select id="cats">
-			<option value="CLASSIC">CLASSIC</option>
-			<option value="SCIENCE">SCIENCE</option>
-			<option value="SPORTS">SPORTS</option>
-			<option value="COMEDY">COMEDY</option>
+			<option value="classic">CLASSIC</option>
+			<option value="science">SCIENCE</option>
+			<option value="sports">SPORTS</option>
+			<option value="comedy">COMEDY</option>
 		</select> <br/>
 		POSITION (COL / ROW):
 		<select id="col">
@@ -68,7 +133,10 @@
 		<button id="b3">PRINT ALL BOOKS</button>
 		<button id="b4">PRINT LIBRARY</button>
 		<button id="b5">NUM BOOKS</button>
-		<hr/>
-<div id="printer"></div>
+		<br/>
+<div id="printer">
+
+</div>
+
 </body>
 </html>
